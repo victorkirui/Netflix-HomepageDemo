@@ -1,0 +1,367 @@
+:root{
+  --primary-color:#e50914;
+  --secondary-color:rgb(241, 238, 238);
+  --darker-color:#141414;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background:#000;
+  height:100%;
+  width:100%;
+  color:#999;
+  font-family:Arial, Helvetica, sans-serif;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+h1,h2{
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+p{
+  margin:0.5rem 0;
+}
+.showcase{
+  width:100%;
+  height:93vh;
+  position:relative;
+  color: var(--secondary-color);
+  background-image: url(https://i.ibb.co/vXqDmnh/background.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+.showcase::after{
+  content:" ";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  box-shadow: inset 120px 100px 250px #000,
+              inset -120px -100px 250px #000;
+}
+.showcase .showcase-top{
+  position:relative;
+  height:90px;
+  width:100%;
+  z-index:2;
+}
+.showcase .showcase-top img{
+  width:170px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.showcase .showcase-content{
+  position:relative;
+  top:70px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  z-index:2;
+}
+.showcase .showcase-content h1{
+  font-size:3rem;
+  margin-bottom:1rem;
+}
+.showcase .showcase-content p{
+  font-size:1.3rem;
+  font-weight:200;
+  text-transform: uppercase;
+  margin-bottom:1.5rem;
+}
+.container{
+  max-width:70%;
+  margin:auto;
+}
+/*tabs styling*/
+.tabs{
+  background:var(--darker-color);
+  padding:1rem 0 0 0;
+}
+.tab-panel{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+}
+.tab-border{
+  border-bottom: 4px solid var(--primary-color);
+}
+/*tab1 content styling*/
+.tab-1-content-inner{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-gap:2rem;
+  justify-content: center;
+  align-items: center;
+  padding:2rem 0;
+}
+.tab-1-content-inner p{
+  color: var(--secondary-color);
+  padding:1rem 0;
+  line-height:1.5rem;
+}
+.tab-1-content-inner img{
+  width:100%;
+}
+/*tab 2 content styling*/
+.tab-2-content-top{
+  display:grid;
+  grid-template-columns:2fr 1fr ;
+  grid-gap:1rem;
+  justify-content: center;
+  align-items: center;
+  margin:1.5rem 0;
+}
+.tab-2-content-top .btn{
+  text-align:center;
+}
+.tab-2-content-bottom{
+  position:relative;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  padding:2rem 0;
+}
+.tab-2-content-bottom img{
+  width:100%;
+  height:80%;
+  padding-bottom:1rem;
+}
+.tab-2-content-bottom h3{
+  font-size:0.7rem;
+  color: var(--secondary-color);
+}
+.tab-2-content-bottom p{
+  font-size:0.6rem;
+}
+#tab-1-content, #tab-2-content, #tab-3-content{
+  display: none;
+}
+.show{
+  display:block !important;
+}
+/*tab 3 content styling*/
+.wrapper{
+  width:80%;
+  margin:auto;
+}
+.text-center{
+  margin:1rem;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.text-center .btn{
+  margin:1rem;
+}
+
+/*table styling*/
+.table{
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+thead tr{
+  line-height:2;
+}
+thead th{
+  color: var(--secondary-color);
+}
+tbody td{
+  text-align: center;
+  padding:0.4rem;
+}
+tbody td:first-child{
+  text-align:start;
+}
+tbody tr:nth-child(odd){
+  background:var(--darker-color);
+}
+/*footer styling*/
+.footer{
+  width:80%;
+  margin:6rem auto 4rem;
+}
+.footer p{
+  margin:1rem 0;
+}
+.footer-cols{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  
+}
+.footer-cols ul li a{
+  color:#999;
+  font-size:0.65rem;
+  margin:3rem 0;
+  
+}
+/*button styles*/
+.btn{
+  background:var(--primary-color);
+  border:none;
+  outline:none;
+  border-radius:3px;
+}
+.btn:hover{
+  background:#d30812;
+}
+.btn-sm{
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translate(-50%,-50%);
+  padding:0.3rem 1.5rem;
+}
+.btn-xl{
+  font-size:1.5rem;
+  padding:0.5rem 2rem;
+  text-transform: uppercase;
+}
+.btn-lg{
+  font-size:0.7rem;
+  padding:0.6rem 1.7rem;
+  text-transform: uppercase;
+}
+.btn-md{
+  font-size:0.7rem;
+  padding:0.6rem 1.7rem;
+  text-transform: uppercase;
+}
+.btn-icon{
+  margin-left:1.1rem;
+  font-weight:100;
+  font-size:1.5rem;
+}
+/*media queries*/
+@media (max-width:768px){
+  .showcase::after{
+    box-shadow: inset 100px 100px 250px #000,
+                inset -100px -100px 250px #000;
+  }
+  .showcase .showcase-top{
+    position:relative;
+    height:90px;
+    width:100%;
+    z-index:2;
+  }
+  .showcase .showcase-top img{
+    width:150px;
+  }
+  .showcase .showcase-content{
+    top:60px;
+  }
+  .showcase .showcase-content h1{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+  }
+  .showcase .showcase-content p{
+    font-size:1rem;
+    font-weight:150;
+  }
+  .btn-xl{
+    font-size:1.2rem;
+    padding:0.5rem 1.5rem;
+  }
+  .btn-md {
+    font-size: 0.5rem;
+    padding: 0.6rem 1.1rem;
+  }
+  .tab-2-content-top{
+    grid-gap:0.5rem;
+  }
+  .container{
+    width:80%;
+  }
+  .text-center{
+  margin:1rem 0.5rem;
+  
+  }
+}
+@media (max-width:720px){
+
+  thead tr{
+    line-height:1.5;
+  }
+  tbody td{
+    text-align: center;
+    padding:0.2rem;
+  }
+}
+@media (max-width:700px){
+  
+  .tab-1-content-inner{
+    display:block;
+  }
+  .tab-1-content-inner img{
+    width:80%;
+    margin:2rem auto;
+  }
+  .tab-2-content-top{
+    grid-gap:0.7rem;
+  }
+  .tab-2-content-top .btn{
+    text-align:center;
+  }
+  .tab-2-content-bottom{
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    padding:2rem 0;
+  }
+  .tab-2-content-bottom img{
+    width:100%;
+    height:80%;
+    padding-bottom:1rem;
+  }
+  .tab-2-content-bottom h3{
+    font-size:0.7rem;
+    color: var(--secondary-color);
+  }
+  .tab-2-content-bottom p{
+    font-size:0.6rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
