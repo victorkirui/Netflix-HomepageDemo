@@ -257,17 +257,14 @@ tbody tr:nth-child(odd){
 /*media queries*/
 @media (max-width:768px){
   .showcase::after{
+    background:rgba(0,0,0,0.65);
     box-shadow: inset 100px 100px 250px #000,
                 inset -100px -100px 250px #000;
   }
-  .showcase .showcase-top{
-    position:relative;
-    height:90px;
-    width:100%;
-    z-index:2;
-  }
   .showcase .showcase-top img{
-    width:150px;
+    width:140px;
+    left:20px;
+    transform:translate(0,-50%);
   }
   .showcase .showcase-content{
     top:60px;
@@ -299,8 +296,16 @@ tbody tr:nth-child(odd){
   
   }
 }
-@media (max-width:720px){
 
+@media (max-width:720px){
+  .showcase::after{
+    background:rgba(0,0,0,0.6);
+    box-shadow: inset 100px 100px 250px #000,
+                inset -100px -100px 250px #000;
+  }
+  .container, .wrapper{
+    width:85%;
+  }
   thead tr{
     line-height:1.5;
   }
@@ -309,8 +314,15 @@ tbody tr:nth-child(odd){
     padding:0.2rem;
   }
 }
+
 @media (max-width:700px){
-  
+  .container, .wrapper{
+    width:90%;
+  }
+  .tab-item{
+    font-size:0.8rem;
+  }
+  /*tab 1 content styling*/
   .tab-1-content-inner{
     display:block;
   }
@@ -318,32 +330,162 @@ tbody tr:nth-child(odd){
     width:80%;
     margin:2rem auto;
   }
+    /*tab 2 content styling*/
   .tab-2-content-top{
     grid-gap:0.7rem;
   }
-  .tab-2-content-top .btn{
-    text-align:center;
-  }
   .tab-2-content-bottom{
-    position:relative;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-    padding:2rem 0;
-  }
-  .tab-2-content-bottom img{
-    width:100%;
-    height:80%;
-    padding-bottom:1rem;
+    display:block;
   }
   .tab-2-content-bottom h3{
-    font-size:0.7rem;
-    color: var(--secondary-color);
+    font-size:0.8rem;
   }
   .tab-2-content-bottom p{
+    font-size:0.7rem;
+    padding-bottom:1rem;
+  }
+  /*tab 3 content styling*/
+  .text-center{
+    margin:1rem 0;
+    text-align: start;
+  }
+  .text-center .btn{
+    margin:1rem;
+  }
+  /*footer styling*/
+.footer{
+  width:80%;
+  margin:6rem auto ;
+}
+.footer p{
+  margin:1rem 0;
+}
+.footer-cols{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: space-between;
+}
+.footer-cols ul li a{
+  margin:2rem 0;
+}
+}
+
+@media (max-width:500px){
+  .showcase::after{
+    background:rgba(0,0,0,0.5);
+    box-shadow: inset 80px 80px 250px #000,
+                inset -80px -80px 250px #000;
+  }
+  .showcase .showcase-top img{
+    width:120px;
+    left:20px;
+    transform:translate(0,-50%);
+  }
+  .showcase .showcase-content{
+    top:60px;
+  }
+  .showcase .showcase-content h1{
+    font-size:2rem;
+    margin-bottom:1rem;
+  }
+  .showcase .showcase-content p{
+    font-size:0.8rem;
+    font-weight:150;
+  }
+  .btn-xl{
+    font-size:0.8rem;
+    padding:0.4rem 1.3rem;
+  }
+  .btn-lg{
+    font-size:0.5rem;
+    padding:0.3rem 1.1rem;
+  }
+  .container, .wrapper{
+    width:95%;
+  }
+  .tab-item{
     font-size:0.6rem;
+  }
+  .tabs p{
+    font-size:0.8rem;
+  }
+  .tab-1-content-inner {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tab-1-content-inner .btn{
+    font-size:0.8rem;
+    padding:0.4rem 1.3rem;
+  }
+  /*tab content 2 styling*/
+  .tab-2-content-top{
+    display:block;
+  }
+  .tab-2-content-top p{
+    margin-bottom: 1.2rem;
+  }
+  .tab-2-content-top .btn{
+    text-align:center;
+    font-size:0.8rem;
+    padding:0.4rem 1rem;
+  }
+  .tab-2-content-bottom img{
+    padding-bottom:0.8rem;
+  }
+/**tab content 3 styling*/
+  .text-center{
+    display:block;
+    text-align: center;
+  }
+  .text-center .btn{
+    display:inline-block;
+    font-size:0.8rem;
+    padding:0.4rem 1rem;
+    
+  }
+  /*table*/
+  thead tr, tbody tr{
+    line-height:1.2;
+  }
+  thead th{
+    font-size:0.7rem;
+  }
+  tbody td{
+    text-align: center;
+    padding:0.2rem;
+    font-size:0.7rem;
+  }
+}
+
+@media (max-width:400px){
+  .showcase::after{
+    box-shadow: inset 60px 60px 200px #000,
+                inset -60px -60px 200px #000;
+  }
+  .showcase .showcase-top img{
+    width:90px;
+    left:25px;
+  }
+  .showcase .showcase-content h1{
+    font-size:1.5rem;
+    margin-bottom:0.8rem;
+  }
+  .showcase .showcase-content p{
+    font-size:0.7rem;
+    font-weight:150;
+  }
+  .btn-xl{
+    font-size:0.69rem;
+  }
+  .btn-lg{
+    font-size:0.3rem;
+    padding:0.2rem 0.9rem;
+  }
+  .btn-icon{
+    margin-left:0.7rem;
+    font-size:0.8rem;
   }
 }
 
