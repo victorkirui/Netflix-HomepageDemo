@@ -12,9 +12,9 @@ function toggleTabBottom(e){
   //bottom border
   this.classList.add('tab-border');
   //select current item
-  const currentItem = document.querySelector(`#${this.id}-content`);
+  const selectedItem = document.querySelector(`#${this.id}-content`);
   //add show class to the currentitem
-  currentItem.classList.add('show');
+  selectedItem.classList.add('show');
   }
 
 function removeBorder(){
